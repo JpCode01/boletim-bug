@@ -51,7 +51,12 @@ esperado é:
 
 Mas o script está mostrando valores diferentes.
 
-## Seu desafio
+## Sobre o bug
+
+- Problema: médias incorretas e classificações erradas.
+- Causa raiz: loop `for` iniciava em `i = 1`, ignorando a primeira nota; e `media > mediaAprovacao` excluía a nota exata 7.0.
+- Correção: `i = 0` e `>=`.
+- Resultado: médias e classificações agora correspondem ao esperado.
 
 Existem **pelo menos 3 bugs** escondidos no `Boletim.groovy`.
 Seu objetivo é encontrar e corrigir todos, com a ajuda de um agente de IA,
